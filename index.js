@@ -29,27 +29,34 @@ let secondNumStr = "";
 let operatorForEquation;
 let equalBtnSelected = false;
 let answer = 0;
+let firstCharOfSecondNum = false;
 // ///////////////////////////////////////////////////
 sevenBtn.addEventListener("click", () => {
-  displayScreen.textContent += "7";
   if (!operatorIsSelected) {
+    displayScreen.textContent += "7";
     firstNumStr += "7";
   } else {
-    displayScreen.textContent = "";
+    if (firstCharOfSecondNum) {
+      displayScreen.textContent = "";
+      firstCharOfSecondNum = false;
+    }
     secondNumStr += "7";
-    displayScreen.textContent = "7";
+    displayScreen.textContent += "7";
   }
 });
 // ///////////////////////////////////////////////////
 
 eightBtn.addEventListener("click", () => {
-  displayScreen.textContent += "8";
   if (!operatorIsSelected) {
+    displayScreen.textContent += "8";
     firstNumStr += "8";
   } else {
-    displayScreen.textContent = "";
+    if (firstCharOfSecondNum) {
+      displayScreen.textContent = "";
+      firstCharOfSecondNum = false;
+    }
     secondNumStr += "8";
-    displayScreen.textContent = "8";
+    displayScreen.textContent += "8";
   }
 });
 // ///////////////////////////////////////////////////
@@ -57,6 +64,7 @@ plusBtn.addEventListener("click", () => {
   operatorIsSelected = true;
   // displayScreen.textContent = "";
   operatorForEquation = "+";
+  firstCharOfSecondNum = true;
 });
 // ///////////////////////////////////////////////////
 equalBtn.addEventListener("click", () => {
