@@ -63,6 +63,133 @@ eightBtn.addEventListener("click", () => {
 });
 // ///////////////////////////////////////////////////
 
+nineBtn.addEventListener("click", () => {
+  if (!operatorIsSelected) {
+    displayScreen.textContent += "9";
+    firstNumStr += "9";
+  } else {
+    if (firstCharOfSecondNum) {
+      displayScreen.textContent = "";
+      firstCharOfSecondNum = false;
+    }
+    secondNumStr += "9";
+    displayScreen.textContent += "9";
+  }
+});
+
+// ///////////////////////////////////////////////////
+
+fourBtn.addEventListener("click", () => {
+  if (!operatorIsSelected) {
+    displayScreen.textContent += "4";
+    firstNumStr += "4";
+  } else {
+    if (firstCharOfSecondNum) {
+      displayScreen.textContent = "";
+      firstCharOfSecondNum = false;
+    }
+    secondNumStr += "4";
+    displayScreen.textContent += "4";
+  }
+});
+
+// ///////////////////////////////////////////////////
+
+fiveBtn.addEventListener("click", () => {
+  if (!operatorIsSelected) {
+    displayScreen.textContent += "5";
+    firstNumStr += "5";
+  } else {
+    if (firstCharOfSecondNum) {
+      displayScreen.textContent = "";
+      firstCharOfSecondNum = false;
+    }
+    secondNumStr += "5";
+    displayScreen.textContent += "5";
+  }
+});
+
+// ///////////////////////////////////////////////////
+
+sixBtn.addEventListener("click", () => {
+  if (!operatorIsSelected) {
+    displayScreen.textContent += "6";
+    firstNumStr += "6";
+  } else {
+    if (firstCharOfSecondNum) {
+      displayScreen.textContent = "";
+      firstCharOfSecondNum = false;
+    }
+    secondNumStr += "6";
+    displayScreen.textContent += "6";
+  }
+});
+
+// ///////////////////////////////////////////////////
+
+oneBtn.addEventListener("click", () => {
+  if (!operatorIsSelected) {
+    displayScreen.textContent += "1";
+    firstNumStr += "1";
+  } else {
+    if (firstCharOfSecondNum) {
+      displayScreen.textContent = "";
+      firstCharOfSecondNum = false;
+    }
+    secondNumStr += "1";
+    displayScreen.textContent += "1";
+  }
+});
+
+// ///////////////////////////////////////////////////
+
+twoBtn.addEventListener("click", () => {
+  if (!operatorIsSelected) {
+    displayScreen.textContent += "2";
+    firstNumStr += "2";
+  } else {
+    if (firstCharOfSecondNum) {
+      displayScreen.textContent = "";
+      firstCharOfSecondNum = false;
+    }
+    secondNumStr += "2";
+    displayScreen.textContent += "2";
+  }
+});
+
+// ///////////////////////////////////////////////////
+
+threeBtn.addEventListener("click", () => {
+  if (!operatorIsSelected) {
+    displayScreen.textContent += "3";
+    firstNumStr += "3";
+  } else {
+    if (firstCharOfSecondNum) {
+      displayScreen.textContent = "";
+      firstCharOfSecondNum = false;
+    }
+    secondNumStr += "3";
+    displayScreen.textContent += "3";
+  }
+});
+
+// ////////////////////////////////////////////////////
+
+zeroBtn.addEventListener("click", () => {
+  if (!operatorIsSelected) {
+    displayScreen.textContent += "0";
+    firstNumStr += "0";
+  } else {
+    if (firstCharOfSecondNum) {
+      displayScreen.textContent = "";
+      firstCharOfSecondNum = false;
+    }
+    secondNumStr += "0";
+    displayScreen.textContent += "0";
+  }
+});
+
+// ////////////////////////////////////////////////////
 decimalBtn.addEventListener("click", () => {
   if (!operatorIsSelected) {
     displayScreen.textContent += ".";
@@ -75,6 +202,18 @@ decimalBtn.addEventListener("click", () => {
     secondNumStr += ".";
     displayScreen.textContent += ".";
   }
+});
+
+// ///////////////////////////////////////////////////
+
+clearBtn.addEventListener("click", () => {
+  operatorIsSelected = false;
+  firstNumStr = "";
+  secondNumStr = "";
+  equalBtnSelected = false;
+  answer = 0;
+  firstCharOfSecondNum = false;
+  displayScreen.textContent = "";
 });
 
 // ///////////////////////////////////////////////////
