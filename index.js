@@ -30,7 +30,9 @@ let operatorForEquation;
 let equalBtnSelected = false;
 let answer = 0;
 let firstCharOfSecondNum = false;
+
 // ///////////////////////////////////////////////////
+
 sevenBtn.addEventListener("click", () => {
   if (!operatorIsSelected) {
     displayScreen.textContent += "7";
@@ -60,13 +62,55 @@ eightBtn.addEventListener("click", () => {
   }
 });
 // ///////////////////////////////////////////////////
+
+decimalBtn.addEventListener("click", () => {
+  if (!operatorIsSelected) {
+    displayScreen.textContent += ".";
+    firstNumStr += ".";
+  } else {
+    if (firstCharOfSecondNum) {
+      displayScreen.textContent = "";
+      firstCharOfSecondNum = false;
+    }
+    secondNumStr += ".";
+    displayScreen.textContent += ".";
+  }
+});
+
+// ///////////////////////////////////////////////////
+
 plusBtn.addEventListener("click", () => {
   operatorIsSelected = true;
   // displayScreen.textContent = "";
   operatorForEquation = "+";
   firstCharOfSecondNum = true;
 });
+
 // ///////////////////////////////////////////////////
+
+multiplyBtn.addEventListener("click", () => {
+  operatorIsSelected = true;
+  operatorForEquation = "*";
+  firstCharOfSecondNum = true;
+});
+
+// ///////////////////////////////////////////////////
+
+minusBtn.addEventListener("click", () => {
+  operatorIsSelected = true;
+  operatorForEquation = "-";
+  firstCharOfSecondNum = true;
+});
+
+// ///////////////////////////////////////////////////
+divisionBtn.addEventListener("click", () => {
+  operatorIsSelected = true;
+  operatorForEquation = "/";
+  firstCharOfSecondNum = true;
+});
+
+// ///////////////////////////////////////////////////
+
 equalBtn.addEventListener("click", () => {
   const operator = operatorForEquation;
   switch (operator) {
@@ -76,7 +120,7 @@ equalBtn.addEventListener("click", () => {
     case "-":
       answer = +firstNumStr - +secondNumStr;
       break;
-    case "x":
+    case "*":
       answer = +firstNumStr * +secondNumStr;
       break;
     case "/":
